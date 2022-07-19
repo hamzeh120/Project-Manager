@@ -1,0 +1,20 @@
+{
+  "name": "project-mangement",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamzeh120/Project-Manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hamzeh120/Project-Manager/issues"
+  },
+  "homepage": "https://github.com/hamzeh120/Project-Manager#readme"
+}

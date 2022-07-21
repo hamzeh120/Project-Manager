@@ -23,10 +23,19 @@ configDatabase(DB_URL){
 }
 createServer(PORT){
     const http = require("http");
-    const server = http.createServer(PORT);
-    server.listeners(`Server run on http://localhost:${PORT}`);
+    const server = http.createServer(this.#app);
+    server.listen(PORT, () => {
+        console.log(`Server run on http://localhost:${PORT}`)
+    });
 }
 errorHandler(){
+    this.#app.use((req, res, next) => {
+        return res.status(404).json({
+            status: 400,
+            success: false,
+            message: "Page Not Found!"
+        })
+    })
     this.#app.use((error, req, res, next) => {
         const status = error?.status || 500;
         const message = error?.message || "InternalServerError";
